@@ -1,130 +1,127 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XJKFSN4FJ2"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sumantha K A</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    @keyframes moveBlob {
+      to {
+        transform: translateX(100%) translateY(100%);
+      }
+    }
 
-      gtag('config', 'G-XJKFSN4FJ2');
-    </script>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-    <meta name="description" content="I am a passionate and dedicated individual with a strong background in Python development. I am currently pursuing a degree in Bachelor of Computer Applications, I am eager to apply my skills and knowledge to contribute to challenging projects. With a focus on problem-solving, collaboration, and continuous learning, I am equipped to tackle complex tasks and deliver high-quality results. I possess strong analytical and critical thinking skills, complemented by effective communication and teamwork abilities. I am enthusiastic about leveraging my expertise in Python, along with my passion for technology, to make a positive impact in the field of software development.">
-    <meta name="keywords" content="Python development, recent graduate, problem-solving, collaboration, continuous learning, analytical skills, critical thinking, effective communication, teamwork, technology, software development, web development">
-    <meta name="author" content="Sumantha K A">
-    <meta property="og:title" content="Sumantha K A">
-    <meta name="og:description" content="I am a passionate and dedicated individual with a strong background in Python development. I am currently pursuing a degree in Bachelor of Computer Applications, I am eager to apply my skills and knowledge to contribute to challenging projects. With a focus on problem-solving, collaboration, and continuous learning, I am equipped to tackle complex tasks and deliver high-quality results. I possess strong analytical and critical thinking skills, complemented by effective communication and teamwork abilities. I am enthusiastic about leveraging my expertise in Python, along with my passion for technology, to make a positive impact in the field of software development.">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://sumanthaka.github.io/sumanthaka/">
-    <title>Sumantha K A</title>
-    <link rel="stylesheet" href="./assets/bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic&amp;display=swap">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cabin:700&amp;display=swap">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Abril+Fatface&amp;display=swap">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Aclonica&amp;display=swap">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Aguafina+Script&amp;display=swap">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Akronim&amp;display=swap">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Alegreya+SC&amp;display=swap">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Alex+Brush&amp;display=swap">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Architects+Daughter&amp;display=swap">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Beau+Rivage&amp;display=swap">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Beth+Ellen&amp;display=swap">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Caveat+Brush&amp;display=swap">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cormorant+Garamond&amp;display=swap">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="./assets/css/List-item.css">
+  .blob {
+      /* animation: moveBlob linear infinite alternate; */
+      transition: all cubic-bezier(0.4, 0, 1, 1);
+    }
+  </style>
 </head>
+<body>
+  <div class="relative max-h-screen">
+    <!-- Blobs  -->
+    <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto relative">
+      <div id="blob1" class="absolute top-0 -left-4 w-72 h-72 bg-purple-300 rounded-full opacity-70 mix-blend-multiply filter blur-xl blob"></div>
+      <div id="blob2" class="absolute -bottom-8 left-28 w-72 h-72 bg-pink-300 rounded-full opacity-70 mix-blend-multiply filter blur-xl blob"></div>
+      <div id="blob3" class="absolute top-0 -right-4 w-72 h-72 bg-yellow-300 rounded-full opacity-70 mix-blend-multiply filter blur-xl blob"></div>
+      <div id="blob4" class="absolute bottom-0 right-0 w-72 h-72 bg-green-300 rounded-full opacity-70 mix-blend-multiply filter blur-xl blob"></div>
+    </div>
+  </div>
+  <nav class="relative bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-10">
+    <!-- Navbar -->
+    <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4 relative">
+      <span class="self-center text-2xl font-semibold whitespace-nowrap">Sumantha K A</span>
+      <button data-collapse-toggle="navbar-default" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-default" aria-expanded="false">
+          <span class="sr-only">Open main menu</span>
+          <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
+              <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
+          </svg>
+      </button>
+      <div class="hidden w-full md:block md:w-auto z-10" id="navbar-default">
+        <ul class="font-medium flex flex-col p-4 md:p-0 mt-4 rounded-lg md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0">
+          <li>
+            <a href="#" class="block py-2 px-3 text-gray-900 rounded">About</a>
+          </li>
+          <li>
+            <a href="#" class="block py-2 px-3 text-gray-900 rounded">Projects</a>
+          </li>
+          <li>
+            <a href="#" class="block py-2 px-3 text-gray-900 rounded">Services</a>
+          </li>
+          <li>
+            <a href="#" class="block py-2 px-3 text-gray-900 rounded">Download</a>
+          </li>
+          <li>
+            <a href="#" class="block py-2 px-3 text-gray-900 rounded">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <div class="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="py-10">
+      <div class="text-center">
+        <h2 class="text-4xl font-extrabold text-gray-900 sm:text-5xl sm:tracking-tight lg:text-6xl">About Me</h2>
+      <div class="flex justify-center">
+        <p class="mt-5 max-w-5xl text-xl text-gray-500">
+          I’m a recent BCA graduate with a stellar 9.49 CGPA and a strong coding competition track record. Recognized as the ’Best Outgoing Student BCA
+          2023’ at my college, I’ve honed my programming skills and applied them as a Python Full Stack Developer at Edubild. I’ve led the development of
+          a GPT‑integrated platform, managed AWS deployments, and conducted technical interviews. With a passion for continuous learning and a drive
+          to excel, I’m poised to make a substantial impact in the dynamic world of technology.
+        </p>
+      </div>
+    </div>
+  </div>
+  <script>
+    function getRandomValue(min, max) {
+      return Math.random() * (max - min) + min;
+    }
 
-<body id="page-top" data-bs-spy="scroll" data-bs-target="#mainNav" data-bs-offset="77">
-    <nav class="navbar navbar-light navbar-expand-md fixed-top" id="mainNav" style="background: linear-gradient(black, white);">
-        <div class="container"><a class="navbar-brand" href="#">Sumantha k a</a><button data-bs-toggle="collapse" class="navbar-toggler navbar-toggler-right" data-bs-target="#navbarResponsive" type="button" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation" value="Menu"><i class="fa fa-bars"></i></button>
-            <div class="collapse navbar-collapse" id="navbarResponsive">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item nav-link"><a class="nav-link active" href="#about">About</a></li>
-                    <li class="nav-item nav-link"><a class="nav-link" href="#download">Download</a></li>
-                    <li class="nav-item nav-link"><a class="nav-link" href="#fiverr">Services</a></li>
-                    <li class="nav-item nav-link"><a class="nav-link" href="#contact">Contact</a></li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-    <header class="masthead" style="background: linear-gradient(white 69%, black);">
-        <div class="intro-body">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-8 mx-auto">
-                        <h1 class="brand-heading" style="color: rgb(0,0,0);font-family: 'Architects Daughter', serif;">Hi! i am</h1>
-                        <h1 class="brand-heading" style="color: rgb(0,0,0);font-size: 96px;font-family: 'Caveat Brush', serif;">Sumantha K A</h1><a class="btn btn-link btn-circle" role="button" href="#about" style="color: var(--bs-black);"><i class="fa fa-angle-double-down animated"></i></a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </header>
-    <section class="text-center content-section" id="about" style="background: linear-gradient(black 86%, white);height: 100vh;">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-8 mx-auto">
-                    <h2 style="font-family: 'Architects Daughter', serif;">About myself</h2>
-                    <p style="font-family: 'Caveat Brush', serif;font-size: 22px;">As an aspiring developer, I am constantly learning new concepts and techniques to advance my skills and knowledge in the field. I am currently in my final year of a Bachelor of Computer Applications (BCA) degree and have maintained an impressive average CGPA of 9.47 over the past four semesters. In addition, I have won several coding competitions, demonstrating my ability to apply my skills in a competitive setting. I am eager to continue learning and growing as a developer, and am excited about the opportunities that lie ahead in my career.</p>
-                </div>
-            </div>
-        </div><a class="btn btn-link btn-circle" role="button" href="#download" style="color: white;"><i class="fa fa-angle-double-down animated"></i></a>
-    </section>
-    <section class="text-center download-section content-section" id="download" style="background: linear-gradient(white 76%, black);height: 100vh;">
-        <div class="container">
-            <div class="col-lg-8 mx-auto">
-                <h1 style="color: var(--bs-black);font-family: 'Architects Daughter', serif;">Download Resume</h1>
-                <p style="font-family: 'Caveat Brush', serif;color: black;">Thank you for visiting my portfolio website. If you're interested in learning more about my skills and experiences, please feel free to download my resume by clicking on the download button below. I look forward to connecting with you!</p><a href="./assets/files/resume.pdf" class="btn btn-primary" role="button" style="background: black;color: white;width: 137.15px;" download="Sumantha's Resume">Download</a>
-            </div>
-        </div><a class="btn btn-link btn-circle" role="button" href="#fiverr" style="color: black;"><i class="fa fa-angle-double-down animated"></i></a>
-    </section>
-    <section class="text-center content-section" id="fiverr" style="margin-bottom: 3em">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-8 mx-auto">
-                    <h2>Check Out My Work and Client Testimonials!&nbsp;</h2>
-                    <!-- Put this code anywhere in the body of your page where you want the badge to show up. -->
-                    <div itemscope itemtype='http://schema.org/Person' class='fiverr-seller-widget' style='display: inline-block;'>
-                         <a itemprop='url' href=https://www.fiverr.com/sumanthaka rel="nofollow" target="_blank" style='display: inline-block;'>
-                            <div class='fiverr-seller-content' id='fiverr-seller-widget-content-70d5652a-c528-4059-bee8-36805f310a00' itemprop='contentURL' style='display: none;'></div>
-                            <div id='fiverr-widget-seller-data' style='display: none;'>
-                                <div itemprop='name' >sumanthaka</div>
-                                <div itemscope itemtype='http://schema.org/Organization'><span itemprop='name'>Fiverr</span></div>
-                                <div itemprop='jobtitle'>Seller</div>
-                                <div itemprop='description'>As an experienced Python developer, I can provide you with quality services in Python scripting, web scraping, and web development. I have a strong background in computer science and have worked on various projects using Python. I am dedicated to delivering high-quality work on time and providing excellent customer service. Let me know how I can help you with your project!</div>
-                            </div>
-                        </a>
-                    </div>
-                    <script id='fiverr-seller-widget-script-70d5652a-c528-4059-bee8-36805f310a00' src='https://widgets.fiverr.com/api/v1/seller/sumanthaka?widget_id=70d5652a-c528-4059-bee8-36805f310a00' data-config='{"category_name":"\n                                    Programming \u0026 Tech\n\n                            "}' async='true' defer='true'></script>
-                </div>
-            </div>
-        </div><a class="btn btn-link btn-circle" role="button" href="#contact" style="color: white;"><i class="fa fa-angle-double-down animated"></i></a>
-    </section>
-    <section class="text-center content-section" id="contact" style="height: 75vh;">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-8 mx-auto">
-                    <h2>Follow me&nbsp;</h2>
-                    <p>If you have any questions or would like to work with me, please don't hesitate to contact me. Thank you for visiting!<br></p>
-                    <ul class="list-inline banner-social-buttons">
-                        <li class="list-inline-item">&nbsp;<a href="https://www.instagram.com/sumantha_k_a/" class="btn btn-primary" type="button" style="background: black;border-color: white;"><i class="fa fa-instagram text-white fa-fw"></i><span class="text-white network-name">Instagram</span></a></li>
-                        <li class="list-inline-item">&nbsp;<a href="https://www.linkedin.com/in/sumantha-k-a-7a224312a/" class="btn btn-primary" type="button" style="background: black;border-color: white;"><i class="fa fa-linkedin-square text-white fa-fw"></i><span class="text-white network-name">&nbsp;LinkedIn</span></a></li>
-                        <li class="list-inline-item">&nbsp;<a href="https://github.com/sumanthaka" class="btn btn-primary" type="button" style="background: black;border-color: white;"><i class="fa fa-github text-white fa-fw"></i><span class="text-white network-name">&nbsp;Github</span></a></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
-    <footer>
-        <div class="container text-center">
-            <p>Copyright © Sumantha K A 2023</p>
-        </div>
-    </footer>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="./assets/js/grayscale.js"></script>
+    function setMotion(elementid, blobs, i) {
+      const element = document.getElementById(elementid);
+      const maxX = window.innerWidth - element.offsetWidth - 100;
+      const maxY = window.innerHeight - element.offsetHeight + 100;
+      let randomValX = Math.random() * maxX
+      let randomValY = Math.random() * maxY
+      for(let j=0; j<blobs.length; j++){
+        if(j!=i){
+          if (parseFloat(document.getElementById(blobs[j]).style.left) == NaN){
+            continue;
+          }
+          if (parseFloat(document.getElementById(blobs[j]).style.top) == NaN){
+            continue;
+          }
+          let diffX = randomValX - parseFloat(document.getElementById(blobs[j]).style.left)
+          if(Math.abs(diffX) < 200){
+            randomValX += Math.round(diffX)
+          }
+          let diffY = randomValY - parseFloat(document.getElementById(blobs[j]).style.top)
+          if(Math.abs(diffY) < 200){
+            randomValY += Math.round(diffY)
+          }
+        }
+      }
+      let durationVal = randomValX / 100
+      durationVal = Math.max(10 - durationVal, durationVal)
+      element.style.transitionDuration = `${durationVal}s`; // Random duration between 3s and 6s
+      element.style.left = `${randomValX}px`; // Random initial position
+      element.style.top = `${randomValY}px`; // Random initial position
+    }
+
+    function setRandomMotion() {
+      for(let i=0; i<arguments.length; i++){
+        const element = document.getElementById(arguments[i]);
+        setMotion(arguments[i], arguments, i);
+        element.addEventListener('transitionend', () => {
+          console.log(element.id)
+          setMotion(arguments[i], arguments, i);
+        });
+      }
+      setMotion(arguments[arguments.length-1], arguments, arguments.length-1)
+    }
+
+    setRandomMotion('blob1', 'blob2', 'blob3', 'blob4');
+  </script>
 </body>
-
 </html>
