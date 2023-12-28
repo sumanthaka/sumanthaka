@@ -5,6 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Sumantha K A</title>
   <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.1/flowbite.min.css" rel="stylesheet" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/> 
   <style>
     @keyframes moveBlob {
       to {
@@ -21,12 +23,16 @@
 <body>
   <div class="relative max-h-screen">
     <!-- Blobs  -->
-    <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto relative">
+    <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto">
       <div id="blob1" class="absolute top-0 -left-4 w-72 h-72 bg-purple-300 rounded-full opacity-70 mix-blend-multiply filter blur-xl blob"></div>
       <div id="blob2" class="absolute -bottom-8 left-28 w-72 h-72 bg-pink-300 rounded-full opacity-70 mix-blend-multiply filter blur-xl blob"></div>
       <div id="blob3" class="absolute top-0 -right-4 w-72 h-72 bg-yellow-300 rounded-full opacity-70 mix-blend-multiply filter blur-xl blob"></div>
-      <div id="blob4" class="absolute bottom-0 right-0 w-72 h-72 bg-green-300 rounded-full opacity-70 mix-blend-multiply filter blur-xl blob"></div>
-    </div>
+      <div id="blob4" class="absolute bottom-0 right-0 w-72 h-72 bg-red-300 rounded-full opacity-70 mix-blend-multiply filter blur-xl blob"></div>
+      <!-- <div id="blob5" class="absolute bottom-0 right-0 w-72 h-72 bg-fuchsia-300 rounded-full opacity-70 mix-blend-multiply filter blur-xl blob"></div>
+      <div id="blob6" class="absolute bottom-0 right-0 w-72 h-72 bg-orange-300 rounded-full opacity-70 mix-blend-multiply filter blur-xl blob"></div>
+      <div id="blob7" class="absolute bottom-0 right-0 w-72 h-72 bg-teal-300 rounded-full opacity-70 mix-blend-multiply filter blur-xl blob"></div>
+      <div id="blob8" class="absolute bottom-0 right-0 w-72 h-72 bg-indigo-300 rounded-full opacity-70 mix-blend-multiply filter blur-xl blob"></div>
+    </div> -->
   </div>
   <nav class="relative bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-10">
     <!-- Navbar -->
@@ -59,7 +65,7 @@
       </div>
     </div>
   </nav>
-  <div class="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
+  <div class="max-w-screen mx-auto px-4 sm:px-6 lg:px-8">
     <div class="py-10">
       <div class="text-center">
         <h2 class="text-4xl font-extrabold text-gray-900 sm:text-5xl sm:tracking-tight lg:text-6xl">About Me</h2>
@@ -80,8 +86,10 @@
 
     function setMotion(elementid, blobs, i) {
       const element = document.getElementById(elementid);
-      const maxX = window.innerWidth - element.offsetWidth - 100;
-      const maxY = window.innerHeight - element.offsetHeight + 100;
+      // const maxX = element.parentNode.offsetWidth - element.offsetWidth;
+      const maxX = window.innerWidth - element.offsetWidth;
+      // const maxY = document.getElementsByTagName('body').offsetHeight - element.offsetHeight;
+      const maxY = window.innerHeight - element.offsetHeight;
       let randomValX = Math.random() * maxX
       let randomValY = Math.random() * maxY
       for(let j=0; j<blobs.length; j++){
@@ -94,11 +102,11 @@
           }
           let diffX = randomValX - parseFloat(document.getElementById(blobs[j]).style.left)
           if(Math.abs(diffX) < 200){
-            randomValX += Math.round(diffX)
+            randomValX = Math.min(randomValX+Math.abs(diffX), maxX)
           }
           let diffY = randomValY - parseFloat(document.getElementById(blobs[j]).style.top)
           if(Math.abs(diffY) < 200){
-            randomValY += Math.round(diffY)
+            randomValY = Math.min(randomValY+Math.abs(diffY), maxY)
           }
         }
       }
@@ -114,14 +122,19 @@
         const element = document.getElementById(arguments[i]);
         setMotion(arguments[i], arguments, i);
         element.addEventListener('transitionend', () => {
-          console.log(element.id)
           setMotion(arguments[i], arguments, i);
         });
       }
-      setMotion(arguments[arguments.length-1], arguments, arguments.length-1)
+      for(let i=0; i<arguments.length; i++){
+        const element = document.getElementById(arguments[i]);
+        element.style.transitionDuration = `${getRandomValue(3, 6)}s`; // Random duration between 3s and 6s
+        element.style.left = `${getRandomValue(0, window.innerWidth - element.offsetWidth)}px`; // Random initial position
+        element.style.top = `${getRandomValue(0, window.innerHeight - element.offsetHeight)}px`; // Random initial position
+      }
     }
 
     setRandomMotion('blob1', 'blob2', 'blob3', 'blob4');
   </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.1/flowbite.min.js"></script>
 </body>
 </html>
