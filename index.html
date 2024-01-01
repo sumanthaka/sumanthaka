@@ -35,9 +35,9 @@
     </div>
 
     <!-- Navbar -->
-    <nav class="backdrop-filter backdrop-blur-sm w-full fixed">
+    <nav class="backdrop-filter backdrop-blur-sm w-full fixed z-50">
       <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4 relative">
-        <span class="self-center text-2xl font-semibold whitespace-nowrap">Sumantha K A</span>
+        <span class="self-center text-2xl font-semibold whitespace-nowrap text-[#1e2452]">Sumantha K A</span>
         <button data-collapse-toggle="navbar-default" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-default" aria-expanded="false">
             <span class="sr-only">Open main menu</span>
             <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
@@ -47,19 +47,19 @@
         <div class="hidden w-full md:block md:w-auto z-10" id="navbar-default">
           <ul class="font-medium flex flex-col p-4 md:p-0 mt-4 rounded-lg md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0">
             <li>
-              <a href="#about" class="block py-2 px-3 text-gray-900 rounded">About</a>
+              <a href="#about" class="block py-2 px-3 text-[#1e2452] rounded">About</a>
             </li>
             <li>
-              <a href="#" class="block py-2 px-3 text-gray-900 rounded">Projects</a>
+              <a href="#projects" class="block py-2 px-3 text-[#1e2452] rounded">Projects</a>
             </li>
             <li>
-              <a href="#" class="block py-2 px-3 text-gray-900 rounded">Services</a>
+              <a href="#services" class="block py-2 px-3 text-[#1e2452] rounded">Services</a>
             </li>
             <li>
-              <a href="#" class="block py-2 px-3 text-gray-900 rounded">Download</a>
+              <a href="#download" class="block py-2 px-3 text-[#1e2452] rounded">Download</a>
             </li>
             <li>
-              <a href="#" class="block py-2 px-3 text-gray-900 rounded">Contact</a>
+              <a href="#contact" class="block py-2 px-3 text-gray-900 rounded">Contact</a>
             </li>
           </ul>
         </div>
@@ -105,109 +105,150 @@
           </div>
         </div>
       </section>
+
+      <!-- Services -->
+      <section id="services" class="flex items-center justify-center h-screen relative z-30 transition-opacity ease-in-out duration-300 snap-center shrink-0">
+        <div class="max-w-screen px-4 sm:px-6 lg:px-8">
+          <div class="py-10">
+            <div class="text-center">
+              <h2 class="text-4xl font-extrabold text-[#1e2452] sm:text-5xl sm:tracking-tight lg:text-6xl">Services</h2>
+              <div class="flex justify-center">
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Download -->
+      <section id="download" class="flex items-center justify-center h-screen relative z-30 transition-opacity ease-in-out duration-300 snap-center shrink-0">
+        <div class="max-w-screen px-4 sm:px-6 lg:px-8">
+          <div class="py-10">
+            <div class="text-center">
+              <h2 class="text-4xl font-extrabold text-[#1e2452] sm:text-5xl sm:tracking-tight lg:text-6xl">Download</h2>
+              <div class="flex justify-center">
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact -->
+      <section id="contact" class="flex items-center justify-center h-screen relative z-30 transition-opacity ease-in-out duration-300 snap-center shrink-0">
+        <div class="max-w-screen px-4 sm:px-6 lg:px-8">
+          <div class="py-10">
+            <div class="text-center">
+              <h2 class="text-4xl font-extrabold text-[#1e2452] sm:text-5xl sm:tracking-tight lg:text-6xl">Contact</h2>
+              <div class="flex justify-center">
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
     </main>
-    <script>
-      function getRandomValue(min, max) {
-        return Math.random() * (max - min) + min;
-      }
+  </div>
+  <script>
+    function getRandomValue(min, max) {
+      return Math.random() * (max - min) + min;
+    }
 
-      function setMotion(elementid, blobs, i) {
-        const element = document.getElementById(elementid);
-        // const maxX = element.parentNode.offsetWidth - element.offsetWidth;
-        const maxX = window.innerWidth - element.offsetWidth;
-        // const maxY = document.getElementsByTagName('body').offsetHeight - element.offsetHeight;
-        const maxY = window.innerHeight - element.offsetHeight;
-        let randomValX = Math.random() * maxX 
-        let randomValY = Math.random() * maxY
-        let n = 10
-        for(let j=0; j<blobs.length; j++){
-          if(j!=i){
-            if (parseFloat(document.getElementById(blobs[j]).style.left) == NaN){
-              continue;
+    function setMotion(elementid, blobs, i) {
+      const element = document.getElementById(elementid);
+      // const maxX = element.parentNode.offsetWidth - element.offsetWidth;
+      const maxX = window.innerWidth - element.offsetWidth;
+      // const maxY = document.getElementsByTagName('body').offsetHeight - element.offsetHeight;
+      const maxY = window.innerHeight - element.offsetHeight;
+      let randomValX = Math.random() * maxX 
+      let randomValY = Math.random() * maxY
+      let n = 10
+      for(let j=0; j<blobs.length; j++){
+        if(j!=i){
+          if (parseFloat(document.getElementById(blobs[j]).style.left) == NaN){
+            continue;
+          }
+          if (parseFloat(document.getElementById(blobs[j]).style.top) == NaN){
+            continue;
+          }
+          let diffX = randomValX - parseFloat(document.getElementById(blobs[j]).style.left)
+          let diffY = randomValY - parseFloat(document.getElementById(blobs[j]).style.top)
+          let dist = Math.sqrt(diffX*diffX + diffY*diffY)
+          if(dist < 300){
+            randomValX = Math.random() * maxX
+            randomValY = Math.random() * maxY
+            if (n > 0){
+              n -= 1
+              j = -1
             }
-            if (parseFloat(document.getElementById(blobs[j]).style.top) == NaN){
+            else{
+              n = 4
               continue;
-            }
-            let diffX = randomValX - parseFloat(document.getElementById(blobs[j]).style.left)
-            let diffY = randomValY - parseFloat(document.getElementById(blobs[j]).style.top)
-            let dist = Math.sqrt(diffX*diffX + diffY*diffY)
-            if(dist < 300){
-              randomValX = Math.random() * maxX
-              randomValY = Math.random() * maxY
-              if (n > 0){
-                n -= 1
-                j = -1
-              }
-              else{
-                n = 4
-                continue;
-              }
             }
           }
         }
-
-        let visible = document.getElementById('about')
-        const rect = visible.getBoundingClientRect();
-        let y = Math.abs(rect.top)
-        let durationVal = randomValX / 100
-        durationVal = Math.max(10 - durationVal, durationVal)
-        // let durationVal = `${getRandomValue(3,6)}s`
-        element.style.transitionDuration = `${durationVal}s`; // Random duration between 3s and 6s
-        element.style.left = `${randomValX}px`; // Random initial position
-        element.style.top = `${randomValY + y}px`; // Random initial position
       }
 
-      function setRandomMotion() {
-        for(let i=0; i<arguments.length; i++){
-          const element = document.getElementById(arguments[i]);
+      let visible = document.getElementById('about')
+      const rect = visible.getBoundingClientRect();
+      let y = Math.abs(rect.top)
+      let durationVal = randomValX / 100
+      durationVal = Math.max(10 - durationVal, durationVal)
+      // let durationVal = `${getRandomValue(3,6)}s`
+      element.style.transitionDuration = `${durationVal}s`; // Random duration between 3s and 6s
+      element.style.left = `${randomValX}px`; // Random initial position
+      element.style.top = `${randomValY + y}px`; // Random initial position
+    }
+
+    function setRandomMotion() {
+      for(let i=0; i<arguments.length; i++){
+        const element = document.getElementById(arguments[i]);
+        setMotion(arguments[i], arguments, i);
+        element.addEventListener('transitionend', () => {
           setMotion(arguments[i], arguments, i);
-          element.addEventListener('transitionend', () => {
-            setMotion(arguments[i], arguments, i);
-          });
-        }
-        let visible = document.getElementById('about')
-
-        const rect = visible.getBoundingClientRect();
-        let y = Math.abs(rect.top)
-        for(let i=0; i<arguments.length; i++){
-          const element = document.getElementById(arguments[i]);
-          element.style.transitionDuration = `${getRandomValue(3, 6)}s`; // Random duration between 3s and 6s
-          element.style.left = `${Math.random() * (window.innerWidth - element.offsetWidth)}px`; // Random initial position
-          element.style.top = `${Math.random() * (window.innerHeight - element.offsetHeight) + y}px`; // Random initial position
-        }
+        });
       }
+      let visible = document.getElementById('about')
 
+      const rect = visible.getBoundingClientRect();
+      let y = Math.abs(rect.top)
+      for(let i=0; i<arguments.length; i++){
+        const element = document.getElementById(arguments[i]);
+        element.style.transitionDuration = `${getRandomValue(3, 6)}s`; // Random duration between 3s and 6s
+        element.style.left = `${Math.random() * (window.innerWidth - element.offsetWidth)}px`; // Random initial position
+        element.style.top = `${Math.random() * (window.innerHeight - element.offsetHeight) + y}px`; // Random initial position
+      }
+    }
+
+    setRandomMotion('blob1', 'blob2', 'blob3', 'blob4');
+
+    window.addEventListener('resize', () => {
       setRandomMotion('blob1', 'blob2', 'blob3', 'blob4');
+    });
 
-      window.addEventListener('resize', () => {
-        setRandomMotion('blob1', 'blob2', 'blob3', 'blob4');
-      });
+    function isInViewport(element) {
+        const rect = element.getBoundingClientRect();
+        console.log(rect, element)
+        console.log(window.innerHeight || document.documentElement.clientHeight)
+        return (
+            rect.top >= -100 &&
+            rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) + 100
+        );
+    }
 
-      function isInViewport(element) {
-          const rect = element.getBoundingClientRect();
-          return (
-              rect.top >= 0 &&
-              rect.left >= 0 &&
-              rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
-              rect.right <= (window.innerWidth || document.documentElement.clientWidth)
-          );
-      }
-
-      ids = ['about', 'projects']
-      window.addEventListener('scroll', () => {
-        for(let i=0; i<ids.length; i++){
-          const element = document.getElementById(ids[i]);
-          if (isInViewport(element)) {
-            element.classList.remove('opacity-0');
-            element.classList.add('opacity-100');
-          } else {
-            element.classList.remove('opacity-100');
-            element.classList.add('opacity-0');
-          }
+    ids = ['about', 'projects', 'services', 'download', 'contact']
+    window.addEventListener('scroll', () => {
+      for(let i=0; i<ids.length; i++){
+        const element = document.getElementById(ids[i]);
+        if (isInViewport(element)) {
+          element.classList.remove('opacity-0');
+          element.classList.add('opacity-100');
+        } else {
+          element.classList.remove('opacity-100');
+          element.classList.add('opacity-0');
         }
-        setRandomMotion('blob1', 'blob2', 'blob3', 'blob4');
-      });
-    </script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.1/flowbite.min.js"></script>
+      }
+      setRandomMotion('blob1', 'blob2', 'blob3', 'blob4');
+    });
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.1/flowbite.min.js"></script>
 </body>
 </html>
