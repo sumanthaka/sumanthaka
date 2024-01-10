@@ -1,5 +1,5 @@
 <h1 align="center">Hi 👋, I'm Sumantha K A</h1>
-<h3 align="center">A recent BCA graduate with a passion for coding and a focus on Python Full Stack Development. As a Python Developer at Edubild, I was part of the development of a GPT‑integrated platform, managed AWS deployments. My skills include Python, Django, Docker, AWS, and more.</h3>
+<h3 align="center">Passionate Python Full Stack Developer with a knack for crafting innovative solutions. From architecting GPT-integrated platforms to seamless AWS deployment, I thrive on pushing the boundaries of what's possible. A tech enthusiast who enjoys the challenge of staying ahead in a dynamic and ever-evolving industry.</h3>
 
 <p align="left"> <img src="https://komarev.com/ghpvc/?username=sumanthaka&label=Profile%20views&color=0e75b6&style=flat" alt="sumanthaka" /> </p>
 
