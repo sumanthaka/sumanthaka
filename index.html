@@ -49,7 +49,7 @@
     </div>
 
     <!-- Navbar -->
-    <nav class="backdrop-filter backdrop-blur-sm w-full fixed z-50">
+    <nav class="backdrop-filter backdrop-blur-sm w-full z-50">
       <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4 relative">
         <span class="self-center text-2xl font-semibold whitespace-nowrap text-[#1e2452]">Sumantha K A</span>
         <button data-collapse-toggle="navbar-default" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-default" aria-expanded="false">
@@ -67,7 +67,10 @@
               <a href="#projects" class="block py-2 px-3 text-[#1e2452] rounded" style="font-family: 'Quicksand'">Projects</a>
             </li>
             <li>
-              <a href="#achievements" class="block py-2 px-3 text-[#1e2452] rounded" style="font-family: 'Quicksand'">Skills</a>
+              <a href="#skills" class="block py-2 px-3 text-[#1e2452] rounded" style="font-family: 'Quicksand'">Skills</a>
+            </li>
+            <li>
+              <a href="#achievements" class="block py-2 px-3 text-[#1e2452] rounded" style="font-family: 'Quicksand'">Achievements</a>
             </li>
             <li>
               <a href="#contact" class="block py-2 px-3 text-gray-900 rounded" style="font-family: 'Quicksand'">Contact</a>
@@ -118,12 +121,12 @@
             <div class="py-10">
               <div class="text-center relative">
                 <h2 class="text-4xl font-extrabold text-[#1e2452] sm:text-5xl sm:tracking-tight lg:text-6xl" style="font-family: 'Titillium Web', serif;">Projects</h2>
-                <div class="flex justify-center mt-6 backdrop-filter backdrop-blur-sm mx-36 rounded-lg">
+                <div class="flex justify-center mt-6 backdrop-filter mx-36 rounded-lg lg:backdrop-blur-sm">
                   <!-- Courosel -->
-                  <div class="relative w-full glide-04">
+                  <div class="relative w-screen xl:max-w-full glide-04">
                     <!-- Slides -->
                     <div class="overflow-hidden" data-glide-el="track">
-                        <ul class="relative w-full overflow-hidden p-0 whitespace-no-wrap flex flex-no-wrap [backface-visibility: hidden] [transform-style: preserve-3d] [touch-action: pan-Y] [will-change: transform]">
+                        <ul class="relative w-full flex flex-no-wrap [backface-visibility: hidden] [transform-style: preserve-3d] [touch-action: pan-Y] [will-change: transform]">
                             <li>
                               <div class="backdrop-filter backdrop-blur-sm w-full h-full">
                                 <div class="mx-0 sm:mx-10 lg:mx-20 xl:mx-[16rem] max-xl:mx-[28rem]">
@@ -248,6 +251,28 @@
             </div>
           </div>
           <div class="flex justify-center items-end">
+            <a href="#skills">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-down">
+                <path d="m6 9 6 6 6-6"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Skills -->
+      <section id="skills" class="flex items-center justify-center h-screen relative z-30 transition-opacity ease-in-out duration-300 snap-center shrink-0">
+        <div>
+          <div class="max-w-screen px-4 sm:px-6 lg:px-8">
+            <div class="py-10">
+              <div class="text-center">
+                <h2 class="text-4xl font-extrabold text-[#1e2452] sm:text-5xl sm:tracking-tight lg:text-6xl" style="font-family: 'Titillium Web', sans-serif;">Skills</h2>
+                <div class="flex justify-center">
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="flex justify-center items-end">
             <a href="#achievements">
               <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-down">
                 <path d="m6 9 6 6 6-6"/>
@@ -257,7 +282,7 @@
         </div>
       </section>
 
-      <!-- Download -->
+      <!-- Achievements -->
       <section id="achievements" class="flex items-center justify-center h-screen relative z-30 transition-opacity ease-in-out duration-300 snap-center shrink-0">
         <div>
           <div class="max-w-screen px-4 sm:px-6 lg:px-8">
@@ -381,7 +406,7 @@
         );
     }
 
-    ids = ['about', 'projects', 'achievements', 'contact']
+    ids = ['about', 'projects', 'skills','achievements', 'contact']
     window.addEventListener('scroll', () => {
       for(let i=0; i<ids.length; i++){
         const element = document.getElementById(ids[i]);
