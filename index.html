@@ -368,14 +368,14 @@
                 <h2 class="text-4xl font-extrabold text-[#1e2452] sm:text-5xl sm:tracking-tight lg:text-6xl" style="font-family: 'Titillium Web', sans-serif;">Skills</h2>
                 <div class="flex justify-center pt-4">
                   <div>
-                    <div class="flex justify-center items-center align-middle gap-10">
+                    <div class="flex md:justify-center items-center align-middle gap-10 overflow-x-auto">
                       <img src="./assets/python_logo.svg" />
                       <img src="./assets/django_logo.png" />
                       <img src="./assets/django_rest_logo.png" />
                       <img src="./assets/flask_logo.png" />
                       <img src="./assets/selenium_logo.png" />
                     </div>
-                    <div class="flex justify-center items-center align-middle gap-10 mt-5">
+                    <div class="flex md:justify-center items-center align-middle gap-10 mt-5 overflow-x-auto">
                       <img src="./assets/js_logo.png" />
                       <img src="./assets/css3_logo.png" alt="CSS3" />
                       <img src="./assets/html5_logo.png" alt="HTML5" />
@@ -383,12 +383,12 @@
                       <img src="./assets/react_logo.png" />
                       <img src="./assets/tailwind_logo.png" />
                     </div>
-                    <div class="flex justify-center items-center align-middle gap-10 mt-5">
+                    <div class="flex justify-center items-center align-middle gap-10 mt-5 overflow-x-auto">
                       <img src="./assets/mongodb_logo.png" />
                       <img src="./assets/postgres_logo.png" />
                       <img src="./assets/mysql_logo.png" />
                     </div>
-                    <div class="flex justify-center items-center align-middle gap-10 mt-5">
+                    <div class="flex md:justify-center items-center align-middle gap-10 mt-5 overflow-x-auto">
                       <img src="./assets/git_logo.png" />
                       <img src="./assets/docker_logo.png" />
                       <img src="./assets/ubuntu_logo.png" />
@@ -831,6 +831,7 @@
     });
 
     glide04.mount();
+
     var glide = new Glide('.glide', {
         type: 'carousel',
         focusAt: 'center',
